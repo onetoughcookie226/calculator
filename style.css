@@ -1,21 +1,17 @@
 /* Basic reset */
-    body {
-        color: #e1dfbe;
-    }
 
 * {
     margin:1px;
     padding:1px;
     box-sizing: border-box;
     font: bold 15px Arial,sans-serif;
+    color: #e1dfbe
 }
-
 
 /* A nice BG gradiant */
 html {
     height:100%;
-    background: radial-gradient(circle,#c0c0c0 20%, #e1dfbe) ;;
-    background-size:cover;
+    background: radial-gradient(circle,#c0c0c0 20%,#708090)
 }
 
 /* Using box shadows to create 3D effects */
@@ -32,11 +28,6 @@ html {
     box-shadow: 0px 4px;
 }
 
-
-
-
-
-
 /* Top portion */
     .top span.clear {
         float: left;
@@ -48,21 +39,34 @@ html {
 
         float: right;
 
+        padding: 0 1px;
+
         background: #708090;
         border-radius: 5px;
 
+        /* Typography*/
+    font-size: 17px;
+        line-height: 40px;
+        color: white;
+        text-align: right;
+
+
     }
+
+
 
 
 
 /* Clear floats */
     .keys, .top {overflow: hidden;}
 
-    /*Appying same to the keys*/
+    /*Applying same to the keys*/
 
 
     .keys span, .top span.clear {
         float: left;
+        position: relative;
+        top: 0;
 
         cursor: pointer;
 
@@ -88,10 +92,40 @@ html {
 /* Remove right margins from operator keys*/
 /*span.operator {margin-right: 0;}*/
 
-/* stye different type of keys (operators/evaluate/clear) */
+/* style different type of keys (operators/evaluate/clear) */
+
+/* Some hover effects*/
+.keys span:hover {
+    background: #9c89f6;
+    box-shadow: 0px 4px #6b54d3;
+    color: white;
+}
+
+.keys span.eval:hover {
+    background: #abb850;
+    box-shadow: 0px 4px #717a3;
+    color: #ffffff;
+}
+
+.top span.clear:hover {
+    background: #f68991;
+    box-shadow: 0px 4px #d3545d;
+    color: white;
+}
+
+
+
+/* Stimulating" pressed effect on active state
+ of the keys by removing the box-shadow and
+ moving the keys down a bit */
+
 .keys span:active {
     box-shadow: 0px 0px #6b54d3;
     top: 4px;
+}
+
+.keys span.operator {
+    background: #FFF0F5;
 }
 
 .keys span.eval:hover {
@@ -107,8 +141,6 @@ html {
     color: white;
 }
 
-/* Stimulating" pressed effect on active state
- of the keys by removing the box-shadow and
- moving the keys down a bit */
+
 
 
