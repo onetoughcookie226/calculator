@@ -1,3 +1,16 @@
+
+    $(".screen").text("Results");
+
+//Add a .click() listener to class clear,
+    $(".clear").click( function () {
+
+    // when it is clicked change the .text of .screen to "clear"
+        $(".screen").text("clear");
+
+    });
+
+
+
 // Get al the keys from the document
 
 // Add onclick event to all the keys and perform operation
